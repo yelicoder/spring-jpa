@@ -2,4 +2,8 @@
 .DS_Store
 target/
 .data
+
+
+# intellij
 .idea
+.iml
