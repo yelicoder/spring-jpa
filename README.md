@@ -6,4 +6,13 @@
 * Repository: Annotated with @Repository. Nonus (data) of the system.One-to-one object mapping. Often one-to-one database table mapping.
 
 ### Module 6
+* data source configuration
+```
+# log level
+logging.level.org.hibernate.SQL=DEBUG 
+# show queries
+spring.jpa.show-sql=true
+# format sql
+spring.jpa.properties.hibernate.format_sql=true
+```
 
