@@ -15,4 +15,9 @@ spring.jpa.show-sql=true
 # format sql
 spring.jpa.properties.hibernate.format_sql=true
 ```
-
+### Module 7
+* Database creation
+```
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update // defaults to create-drop for embedded dbs. values are: create, update, create-drop, validate and none
+```
