@@ -7,4 +7,10 @@ target/
 # intellij
 .idea
 .iml
+*.iml
 *.idea
+
+# Eclipse
+.project
+.settings
+.classpath
