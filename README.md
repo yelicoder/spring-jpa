@@ -38,5 +38,12 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
 ```
 * @PersistenceContext - Injects EntityManager
 * @Service - Location of Business logic
+  * Annotated on the Impl class
 * @Repository - Database Integration
+  * Annotated on the Impl class
 * @Transactional - Beginning of Transaction
+* Layers of abstractions when working with persistent data in Java/Spring
+  * JDBC
+  * JdbcTemplate
+  * JPA (Contains EntityManager)
+  * Spring Data JPA (contains Repository)
