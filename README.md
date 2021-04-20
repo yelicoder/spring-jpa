@@ -47,3 +47,23 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * JdbcTemplate
   * JPA (Contains EntityManager)
   * Spring Data JPA (contains Repository)
+* Join Types
+  * @OneToOne
+  * @OneToMany
+    * Paried with @ManyToOne
+    * mappedBy="xx". xx is the Entity name and is the "One" that has many of another entity. xx should be the same object on the corresponding @ManyToOne
+    * cascade: when we perform some action on the target entity, the same action will be applied to the associated entity
+    * fetch: lazy or eager loading
+  * @ManyToOne
+  * @ManyToMany
+* Cascade Types
+  * ALL: propagates all operations - including Hibernate-specific ones - from a parent to a child entity
+  * PERSIST: propagates the persist operation from a parent to a child entity
+  * MERGE: propagates the merge operation from a parent to a child entity
+  * REMOVE: propagates the remove operation from parent to child entity
+  * REFRESH: re-read the value of a given instance from the database
+  * DETACH: The child entity will also get removed from the persistent context
+  * REPLICATE (Hibernate only): used when we have more than one data source, and we want the data in sync
+  * SAVE_UPDATE (Hibernate only): propagates the same operation to the associated child entity
+  * LOCK (Hibernate only): re-attaches the entity and its associated child entity with the persistent context again
+  
