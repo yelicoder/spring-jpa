@@ -36,3 +36,7 @@ spring.jpa.hibernate.ddl-auto=update // defaults to create-drop for embedded dbs
 ```
 spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 ```
+* @PersistenceContext - Injects EntityManager
+* @Service - Location of Business logic
+* @Repository - Database Integration
+* @Transactional - Beginning of Transaction
