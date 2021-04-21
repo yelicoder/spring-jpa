@@ -66,4 +66,29 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * REPLICATE (Hibernate only): used when we have more than one data source, and we want the data in sync
   * SAVE_UPDATE (Hibernate only): propagates the same operation to the associated child entity
   * LOCK (Hibernate only): re-attaches the entity and its associated child entity with the persistent context again
+* Fetch Types
+  * Lazy - DB query when property is called
+  * Eager - DB query when object is created
+* JPQL
+  * JPQL != SQL
+  * Centered around objects
+  * Query q = em.createQuery ("Select r from Registration r")
+    * SQL will be: "Select * from Registration"
+
+* @JsonManagedReference
+  * when converting to Json, just one level, do not cascading
+* @JsonBackReference
+* @RestController: method return type will be ResponseBody
+* Projection
+  * Presents objects to the UI
+  * Objects addd using JPQL
+  * Projection Objects can be JPA Entities
+  * Construction for the projection is needed
+  * Object is not tied to complete entity or entity hierarchy
+* @NamedQueries and @NamedQuery
+  * Cleaner then adhoc JPQL
+  * Not required, but focuses on the domain
+  * Named parameters
+
+  
   
