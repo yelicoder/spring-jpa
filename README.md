@@ -52,7 +52,7 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * @OneToMany
     * Paried with @ManyToOne
     * mappedBy="xx". xx is the Entity name and is the "One" that has many of another entity. xx should be the same object on the corresponding @ManyToOne
-    * cascade: when we perform some action on the target entity, the same action will be applied to the associated entity
+    * cascade: when performing some actions on the target entity, the same actions are applied to the associated entity
     * fetch: lazy or eager loading
   * @ManyToOne
   * @ManyToMany
@@ -60,10 +60,10 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * ALL: propagates all operations - including Hibernate-specific ones - from a parent to a child entity
   * PERSIST: propagates the persist operation from a parent to a child entity
   * MERGE: propagates the merge operation from a parent to a child entity
-  * REMOVE: propagates the remove operation from parent to child entity
+  * REMOVE: propagates the remove operation from a parent to a child entity
   * REFRESH: re-read the value of a given instance from the database
   * DETACH: The child entity will also get removed from the persistent context
-  * REPLICATE (Hibernate only): used when we have more than one data source, and we want the data in sync
+  * REPLICATE (Hibernate only): used when having more than one data source, and we want the data in sync
   * SAVE_UPDATE (Hibernate only): propagates the same operation to the associated child entity
   * LOCK (Hibernate only): re-attaches the entity and its associated child entity with the persistent context again
 * Fetch Types
@@ -75,9 +75,8 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * Query q = em.createQuery ("Select r from Registration r")
     * SQL will be: "Select * from Registration"
 
-* @JsonManagedReference
-  * when converting to Json, just one level, do not cascading
-* @JsonBackReference
+* @JsonManagedReference: including the annotated as part of Json
+* @JsonBackReference: not including the annotated as part of Json
 * @RestController: method return type will be ResponseBody
 * Projection
   * Presents objects to the UI
@@ -86,17 +85,17 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * Construction for the projection is needed
   * Object is not tied to complete entity or entity hierarchy
 * @NamedQueries and @NamedQuery
-  * Cleaner then adhoc JPQL
+  * Cleaner than adhoc JPQL
   * Not required, but focuses on the domain
   * Named parameters
 ### Module 9
 * Updates using JPA
-  * Persiste is just used for Created
+  * Persist is just used for Created
   * Merge is used for updates
   * Save methods are usually overridden to handle both
 * Spring Data JPA
   * Wrapper for JPA
-  * Replaces our Repository Tier
+  * Replaces Repository Tier
   * Eliminates boiler plate code
   * Extended for additional functionality
 * @NamedQuery: has to add Entity class before the name
