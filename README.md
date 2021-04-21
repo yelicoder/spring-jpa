@@ -81,7 +81,7 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
 * @RestController: method return type will be ResponseBody
 * Projection
   * Presents objects to the UI
-  * Objects addd using JPQL
+  * Objects added using JPQL
   * Projection Objects can be JPA Entities
   * Construction for the projection is needed
   * Object is not tied to complete entity or entity hierarchy
