@@ -45,8 +45,8 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
 * Layers of abstractions when working with persistent data in Java/Spring
   * JDBC
   * JdbcTemplate
-  * JPA (Contains EntityManager)
-  * Spring Data JPA (contains Repository)
+  * JPA (Contains EntityManager and Repository)
+  * Spring Data JPA (contains JpaRepository)
 * Join Types
   * @OneToOne
   * @OneToMany
@@ -89,6 +89,16 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
   * Cleaner then adhoc JPQL
   * Not required, but focuses on the domain
   * Named parameters
-
-  
+### Module 9
+* Updates using JPA
+  * Persiste is just used for Created
+  * Merge is used for updates
+  * Save methods are usually overridden to handle both
+* Spring Data JPA
+  * Wrapper for JPA
+  * Replaces our Repository Tier
+  * Eliminates boiler plate code
+  * Extended for additional functionality
+* @NamedQuery: has to add Entity class before the name
+  * Structure: EntityName.JpaRepostoryMethodName
   
