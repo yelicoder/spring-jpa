@@ -27,7 +27,7 @@ spring.jpa.hibernate.ddl-auto=update // defaults to create-drop for embedded dbs
   * @Table - Table specifics
   * @Id - Primary Key
   * @GeneratedValue - Used with @Id. Strategies are:
-    * IDENTITY - unique at per type
+    * IDENTITY - unique per type
     * AUTO - unique at the database level
     * SEQUENCE - If database supports it. No gurantee that id are continuous
     * TABLE - almost identical to SEQUENCE. Uses identity table
